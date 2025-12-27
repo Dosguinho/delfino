@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "/delfino/", 
+  base: "/delfino/", // Adicione isso para o GitHub Pages reconhecer os caminhos
   plugins: [react()],
   resolve: {
     alias: {
