@@ -3,168 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delfino Odílio | Currículo Futurista</title>
+    <title>Delfino Odílio | Portfólio Futurista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --neon-blue: #00f3ff;
-            --neon-purple: #bc13fe;
-            --bg-dark: #0a0a0c;
-            --card-bg: #16161a;
-            --text: #e0e0e0;
+            --cyan: #00f3ff;
+            --purple: #bc13fe;
+            --dark-bg: #121214;
+            --card-bg: #1c1c21;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
 
-        .resume-container {
-            max-width: 800px;
+        /* Efeito de fundo sutil */
+        body::before {
+            content: "";
+            position: absolute;
             width: 100%;
-            background: var(--card-bg);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-            border-top: 4px solid var(--neon-blue);
+            height: 100%;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0c 100%);
+            z-index: -1;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        .card {
+            background: var(--card-bg);
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 12px;
+            position: relative;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Bordas Neon Animadas Estilo Imagem */
+        .card::after {
+            content: "";
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            border-radius: 14px;
+            border: 2px solid var(--cyan);
+            clip-path: inset(0 0 0 0 round 14px);
+            filter: drop-shadow(0 0 10px var(--cyan));
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        .content {
+            z-index: 1;
         }
 
         h1 {
-            color: var(--neon-blue);
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+        }
+
+        .subtitle-box {
+            display: inline-block;
+            border: 1px solid var(--purple);
+            padding: 5px 15px;
+            margin-bottom: 30px;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 0;
-            font-size: 2.5em;
         }
 
-        .subtitle {
-            color: var(--neon-purple);
-            font-weight: bold;
-            margin-top: 10px;
-            letter-spacing: 1px;
-        }
-
-        .section {
+        .info-list {
+            list-style: none;
             margin-bottom: 30px;
         }
 
-        .section-title {
-            color: var(--neon-blue);
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-size: 1.2em;
+        .info-item {
             display: flex;
             align-items: center;
-        }
-
-        .section-title::before {
-            content: ">";
-            margin-right: 10px;
-            color: var(--neon-purple);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .item {
             margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #d1d1d1;
         }
 
-        .item strong {
-            display: block;
-            color: #fff;
+        .icon {
+            margin-right: 15px;
+            color: var(--purple);
+            font-size: 1.4rem;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .tag {
-            display: inline-block;
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid var(--neon-blue);
-            color: var(--neon-blue);
-            padding: 4px 12px;
-            border-radius: 5px;
-            font-size: 0.85em;
-            margin: 4px;
+            border: 1.5px solid var(--cyan);
+            color: var(--cyan);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: rgba(0, 243, 255, 0.05);
+            transition: 0.3s;
         }
 
-        .contact-info {
-            font-size: 0.9em;
-            color: #aaa;
-            margin-top: 10px;
+        .tag:hover {
+            background: var(--cyan);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--cyan);
         }
 
-        @media (max-width: 600px) {
-            .grid { grid-template-columns: 1fr; }
+        /* Estilização de Scroll para mobile */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .card { padding: 25px; }
         }
     </style>
 </head>
 <body>
-    <div class="resume-container">
-        <header>
+
+    <div class="card">
+        <div class="content">
             <h1>Delfino Odílio</h1>
-            <div class="subtitle">JOVEM APRENDIZ • SUPORTE TI • LOGÍSTICA</div>
-            <div class="contact-info">
-                Teresina, PI | 📧 delfino.odilio@exemplo.com
-            </div>
-        </header>
-
-        <div class="section">
-            <div class="section-title">Resumo Profissional</div>
-            <p>Jovem focado em tecnologia e processos administrativos. Experiência prática em logística e suporte técnico, com domínio de ferramentas de automação (Excel VBA) e análise de dados.</p>
-        </div>
-
-        <div class="grid">
-            <div class="section">
-                <div class="section-title">Habilidades Técnicas</div>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Excel VBA</span>
-                    <span class="tag">Manutenção de Hardware</span>
-                    <span class="tag">Logística Privada</span>
-                </div>
+            <div class="subtitle-box">
+                JOVEM APRENDIZ • SUPORTE TI • LOGÍSTICA
             </div>
 
-            <div class="section">
-                <div class="section-title">Certificações</div>
-                <div class="item">
-                    <strong>Google IT Support Professional</strong>
-                    <span>Certificado Profissional Google</span>
-                </div>
-                <div class="item">
-                    <strong>SEBRAE - Formação Empreendedora</strong>
-                    <span>Desenvolvimento de Projetos</span>
-                </div>
-            </div>
-        </div>
+            <ul class="info-list">
+                <li class="info-item">
+                    <span class="icon">🚀</span> 
+                    Habilidades: Python, SQL, Excel VBA
+                </li>
+                <li class="info-item">
+                    <span class="icon">🎓</span> 
+                    Certificações: Google IT Support / SEBRAE
+                </li>
+                <li class="info-item">
+                    <span class="icon">💼</span> 
+                    Experiência: Adm & Logística (Marvão)
+                </li>
+                <li class="info-item">
+                    <span class="icon">📍</span> 
+                    Teresina, PI
+                </li>
+            </ul>
 
-        <div class="section">
-            <div class="section-title">Experiência Recente</div>
-            <div class="item">
-                <strong>Empresa Marvão (Logística/Adm)</strong>
-                <span>Auxílio em processos administrativos, controle de estoque e suporte operacional.</span>
+            <div class="tags-container">
+                <div class="tag">Tecnologia</div>
+                <div class="tag">Administração</div>
+                <div class="tag">Análise</div>
+                <div class="tag">Inovação</div>
             </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Idiomas</div>
-            <span class="tag">Português (Nativo)</span>
-            <span class="tag">Inglês (Técnico)</span>
         </div>
     </div>
+
 </body>
 </html>
