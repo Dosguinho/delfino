@@ -11,14 +11,12 @@
         body { background-color: var(--dark); color: white; font-family: 'Rajdhani', sans-serif; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         
-        /* NAVBAR */
         nav { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; position: sticky; top: 0; background: var(--dark); z-index: 100; }
         .nav-logo { font-family: 'Orbitron'; color: var(--cyan); font-weight: bold; }
         .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a { text-decoration: none; color: #888; font-size: 0.8rem; text-transform: uppercase; font-family: 'Orbitron'; transition: 0.3s; }
         .nav-links a:hover { color: var(--cyan); }
 
-        /* HEADER */
         header { padding: 80px 0; border-bottom: 1px solid #222; margin-bottom: 50px; }
         .label { font-family: 'Orbitron'; color: var(--cyan); font-size: 0.7rem; letter-spacing: 4px; }
         h1 { font-family: 'Orbitron'; font-size: clamp(2.5rem, 8vw, 4rem); text-transform: uppercase; margin: 10px 0; line-height: 0.9; }
@@ -32,7 +30,6 @@
         .btn-primary { background: var(--cyan); color: var(--dark); box-shadow: 0 0 20px rgba(0, 243, 255, 0.4); font-weight: bold; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 0 25px var(--cyan); background: var(--cyan); color: var(--dark); }
 
-        /* SECTIONS */
         section { padding: 60px 0; }
         .title { font-family: 'Orbitron'; color: var(--purple); font-size: 1.2rem; margin-bottom: 30px; letter-spacing: 3px; display: flex; align-items: center; gap: 15px; }
         .title::after { content: ""; height: 1px; flex-grow: 1; background: linear-gradient(to right, var(--purple), transparent); }
@@ -47,6 +44,10 @@
         .bar-fill { background: linear-gradient(90deg, var(--cyan), var(--purple)); height: 100%; border-radius: 10px; }
         
         .tag { background: #1a1a20; padding: 5px 12px; border-radius: 3px; font-size: 0.8rem; border: 1px solid #333; margin: 3px; display: inline-block; }
+
+        /* QUADRO DE IDIOMAS */
+        .language-box { border: 1px solid var(--purple); padding: 20px; border-radius: 5px; background: rgba(188, 19, 254, 0.05); margin-top: 20px; }
+        .lang-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px; }
 
         footer { border-top: 1px solid #222; padding: 60px 0; text-align: center; }
         .info-footer { display: flex; justify-content: space-between; flex-wrap: wrap; text-align: left; background: #111; padding: 25px; margin-bottom: 40px; gap: 20px; border-radius: 5px; }
@@ -74,8 +75,8 @@
         <div class="typewriter">Data Analytics Ent|</div>
         <p class="intro">Busco oportunidade como Jovem Aprendiz ou efetivo. Formação técnica em Administração com experiência em logística, suporte administrativo e domínio de Excel (VBA), Python e Análise de Dados.</p>
         <div class="cta-group">
-            <a href="mailto:delfinoodilio1234@gmail.com" class="btn btn-primary">Entrar em Contato</a>
-            <a href="#experiencia" class="btn">Ver Experiência</a>
+            <a href="mailto:delfinoodilio1234@gmail.com" class="btn btn-primary">EMAIL</a>
+            <a href="https://wa.me/5586994634380" target="_blank" class="btn">WHATSAPP</a>
         </div>
         <p style="color: #666; font-size: 0.9rem;">📍 Teresina, PI | 📱 (86) 9 9463-4380</p>
     </header>
@@ -112,7 +113,18 @@
                     <span class="tag">Rápido Aprendizado</span> <span class="tag">Pensamento Analítico</span>
                     <span class="tag">Resolução de Problemas</span> <span class="tag">Trabalho em Equipe</span>
                 </div>
-                <p>🇧🇷 Português (Nativo) | 🇺🇸 Inglês (B2) | 🇪🇸 Espanhol (B1)</p>
+                
+                <div class="language-box">
+                    <p style="color: var(--purple); font-family: 'Orbitron'; font-size: 0.7rem; margin-bottom: 10px; letter-spacing: 2px;">CERTIFICAÇÃO LINGUÍSTICA</p>
+                    <div class="lang-item">
+                        <span>🇺🇸 INGLÊS</span>
+                        <span style="color: var(--cyan);">B2 - INTERMEDIÁRIO</span>
+                    </div>
+                    <div class="lang-item">
+                        <span>🇪🇸 ESPANHOL</span>
+                        <span style="color: var(--cyan);">B1 - INTERMEDIÁRIO</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
