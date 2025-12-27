@@ -3,11 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "/delfino/", // ISSO AQUI É O MAIS IMPORTANTE
-  server: {
-    host: "0.0.0.0",
-    port: 8080,
-  },
+  base: "/delfino/", 
   plugins: [react()],
   resolve: {
     alias: {
