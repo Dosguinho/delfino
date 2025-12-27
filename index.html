@@ -1,25 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delfino Odílio | Portfólio - Jovem Aprendiz & Suporte TI</title>
-    <meta name="description" content="Portfólio de Delfino Odílio - Jovem Aprendiz Administrativo com experiência em logística, suporte TI, Excel VBA, Python e análise de dados. Disponível para oportunidades em Teresina, PI." />
-    <meta name="keywords" content="Delfino Odílio, Jovem Aprendiz, Suporte TI, Excel VBA, Python, Teresina, Administração, Logística" />
-    <meta name="author" content="Delfino Odílio" />
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Delfino Odílio | Portfólio - Jovem Aprendiz & Suporte TI" />
-    <meta property="og:description" content="Portfólio profissional - Experiência em administração, logística e tecnologia." />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Delfino Odílio | Portfólio" />
-    <meta name="twitter:description" content="Jovem Aprendiz Administrativo com foco em TI e análise de dados." />
-    
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delfino Odílio | Currículo Futurista</title>
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #bc13fe;
+            --bg-dark: #0a0a0c;
+            --card-bg: #16161a;
+            --text: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border-top: 4px solid var(--neon-blue);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: var(--neon-purple);
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: var(--neon-blue);
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: ">";
+            margin-right: 10px;
+            color: var(--neon-purple);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item strong {
+            display: block;
+            color: #fff;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 4px 12px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            margin: 4px;
+        }
+
+        .contact-info {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>Delfino Odílio</h1>
+            <div class="subtitle">JOVEM APRENDIZ • SUPORTE TI • LOGÍSTICA</div>
+            <div class="contact-info">
+                Teresina, PI | 📧 delfino.odilio@exemplo.com
+            </div>
+        </header>
+
+        <div class="section">
+            <div class="section-title">Resumo Profissional</div>
+            <p>Jovem focado em tecnologia e processos administrativos. Experiência prática em logística e suporte técnico, com domínio de ferramentas de automação (Excel VBA) e análise de dados.</p>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <div class="section-title">Habilidades Técnicas</div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Excel VBA</span>
+                    <span class="tag">Manutenção de Hardware</span>
+                    <span class="tag">Logística Privada</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Certificações</div>
+                <div class="item">
+                    <strong>Google IT Support Professional</strong>
+                    <span>Certificado Profissional Google</span>
+                </div>
+                <div class="item">
+                    <strong>SEBRAE - Formação Empreendedora</strong>
+                    <span>Desenvolvimento de Projetos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Experiência Recente</div>
+            <div class="item">
+                <strong>Empresa Marvão (Logística/Adm)</strong>
+                <span>Auxílio em processos administrativos, controle de estoque e suporte operacional.</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Idiomas</div>
+            <span class="tag">Português (Nativo)</span>
+            <span class="tag">Inglês (Técnico)</span>
+        </div>
+    </div>
+</body>
 </html>
