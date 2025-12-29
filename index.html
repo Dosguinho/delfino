@@ -7,17 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #1e293b; --accent: #3b82f6; --text-main: #f1f5f9; --text-sub: #94a3b8; --bg: #0f172a; }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            background-color: var(--bg); 
-            color: var(--text-main); 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
-            scroll-behavior: smooth; 
-        }
-        
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 850px; margin: 0 auto; padding: 0 25px; }
 
         nav { padding: 25px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -31,11 +22,10 @@
         .subtitle { font-size: 1.4rem; color: var(--accent); font-weight: 500; margin-bottom: 25px; letter-spacing: 0.5px; }
         .intro { font-size: 1.1rem; color: var(--text-sub); max-width: 750px; margin-bottom: 35px; }
 
+        /* AJUSTE NOS BOTÕES: TODOS SEM DESTAQUE INICIAL, APENAS NO HOVER */
         .cta-group { display: flex; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 12px 30px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; text-align: center; }
-        .btn-primary { background: #fff; color: var(--bg); }
-        .btn-secondary { border: 1px solid rgba(255,255,255,0.2); color: #fff; }
-        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .btn { padding: 12px 30px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; text-align: center; border: 1px solid rgba(255,255,255,0.2); color: #fff; background: transparent; }
+        .btn:hover { background: #fff; color: var(--bg); transform: translateY(-2px); }
 
         section { padding: 80px 0; }
         h2 { font-size: 1.6rem; color: #fff; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; }
@@ -45,6 +35,14 @@
         .card h3 { font-size: 1.3rem; color: #fff; margin-bottom: 5px; }
         .company { color: var(--accent); font-weight: 600; display: block; margin-bottom: 20px; font-size: 0.95rem; }
         
+        /* GRID DE PROJETOS */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+        .project-card { background: #1e293b; padding: 25px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: space-between; }
+        .project-card h4 { color: #fff; margin-bottom: 10px; font-size: 1.1rem; }
+        .project-card p { color: var(--text-sub); font-size: 0.85rem; margin-bottom: 20px; }
+        .btn-sm { padding: 8px 15px; font-size: 0.75rem; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; border-radius: 4px; text-align: center; transition: 0.3s; }
+        .btn-sm:hover { background: var(--accent); color: #fff; }
+
         ul { list-style: none; }
         ul li { margin-bottom: 12px; color: var(--text-sub); padding-left: 20px; position: relative; font-size: 0.95rem; }
         ul li::before { content: "→"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
@@ -58,7 +56,6 @@
 
         .language-box { border: 1px solid rgba(59, 130, 246, 0.5); padding: 25px; border-radius: 8px; background: rgba(59, 130, 246, 0.05); margin-top: 25px; }
         .lang-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .lang-item:last-child { border: none; }
 
         footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 80px 0; text-align: center; }
         .footer-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; margin-bottom: 50px; }
@@ -75,6 +72,7 @@
         <ul class="nav-links">
             <li><a href="#">Início</a></li>
             <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#projetos">Projetos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
@@ -86,9 +84,9 @@
         <p class="intro">Busco oportunidade como Jovem Aprendiz ou efetivo. Formação técnica em Administração com experiência em logística, suporte administrativo e domínio de Excel (VBA), Python e Análise de Dados.</p>
         
         <div class="cta-group">
-            <a href="mailto:delfinoodilio1234@gmail.com" class="btn btn-primary">EMAIL</a>
-            <a href="https://wa.me/5586994634380" target="_blank" class="btn btn-secondary">WHATSAPP</a>
-            <a href="curriculo_delfino_odilio.pdf" download class="btn btn-secondary">BAIXAR CURRÍCULO</a>
+            <a href="mailto:delfinoodilio1234@gmail.com" class="btn">EMAIL</a>
+            <a href="https://wa.me/5586994634380" target="_blank" class="btn">WHATSAPP</a>
+            <a href="curriculo_delfino_odilio.pdf" download class="btn">BAIXAR CURRÍCULO</a>
         </div>
         <p style="margin-top: 25px; color: var(--text-sub); font-size: 0.85rem;">Teresina, PI | (86) 9 9463-4380</p>
     </header>
@@ -102,9 +100,36 @@
                 <li>Uso da Aplicação Excel para o sistema interno com funções VBA</li>
                 <li>Gerenciamento e tratamento de planilhas e relatórios</li>
                 <li>Desenvolvimento de gráficos e relatórios visuais em Python para PowerPoint</li>
-                <li>Organização e digitalização de documentos veiculares (CRLV, RENAVAM)</li>
+                <li>Organização e digitalização de documentos veiculares</li>
                 <li>Suporte às atividades de monitoramento da frota</li>
             </ul>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Aplique minha habilidade</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div>
+                    <h4>GreenUP</h4>
+                    <p>desxrição aqui</p>
+                </div>
+                <a href="#" class="btn-sm">Ver Projeto</a>
+            </div>
+            <div class="project-card">
+                <div>
+                    <h4>StormHostingBR</h4>
+                    <p>desc de storm</p>
+                </div>
+                <a href="#" class="btn-sm">Ver Projeto</a>
+            </div>
+            <div class="project-card">
+                <div>
+                    <h4>Desafio Microsoft LEARN</h4>
+                    <p>descrição aqui</p>
+                </div>
+                <a href="#" class="btn-sm">Ver Projeto</a>
+            </div>
         </div>
     </section>
 
@@ -115,47 +140,22 @@
                 <p style="color: var(--text-main); font-weight: 600; margin-bottom: 20px;">TÉCNICAS</p>
                 <div class="skill-name"><span>Excel & VBA</span><span>90%</span></div>
                 <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
-                
                 <div class="skill-name"><span>Python</span><span>85%</span></div>
                 <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
-                
                 <div class="skill-name"><span>SQL & Databases</span><span>75%</span></div>
                 <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
-                
-                <div class="skill-name"><span>Microsoft Office</span><span>95%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 95%"></div></div>
             </div>
             <div>
                 <p style="color: var(--text-sub); font-size: 0.85rem; margin-bottom: 15px; font-weight: 600;">COMPETÊNCIAS & IDIOMAS</p>
                 <div style="margin-bottom: 30px;">
-                    <span class="tag">Rápido Aprendizado</span> <span class="tag">Resolução de Problemas</span>
-                    <span class="tag">Pensamento Analítico</span> <span class="tag">Comunicação Assertiva</span>
-                    <span class="tag">Organização</span> <span class="tag">Trabalho em Equipe</span>
+                    <span class="tag">Rápido Aprendizado</span> <span class="tag">Pensamento Analítico</span>
+                    <span class="tag">Comunicação Assertiva</span> <span class="tag">Trabalho em Equipe</span>
                 </div>
-
                 <div class="language-box">
-                    <p style="color: var(--accent); font-size: 0.75rem; font-weight: 800; margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase;">Proficiência em Idiomas</p>
+                    <p style="color: var(--accent); font-size: 0.75rem; font-weight: 800; margin-bottom: 15px; text-transform: uppercase;">Proficiência em Idiomas</p>
                     <div class="lang-item"><span>🇺🇸 Inglês</span><strong>B2 - Intermediário</strong></div>
                     <div class="lang-item"><span>🇪🇸 Espanhol</span><strong>B1 - Intermediário</strong></div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="conquistas">
-        <h2>Certificações & Conquistas</h2>
-        <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-            <div class="card" style="margin-bottom: 0; padding: 25px;">
-                <h3>Google IT Support</h3>
-                <p style="color: var(--text-sub); font-size: 0.9rem;">Certificação Profissional em Suporte TI, redes e bancos de dados.</p>
-            </div>
-            <div class="card" style="margin-bottom: 0; padding: 25px;">
-                <h3>Liga Jovem Sebrae 2025</h3>
-                <p style="color: var(--text-sub); font-size: 0.9rem;">Classificado Etapa Nacional. Desenvolvimento de App sustentável.</p>
-            </div>
-            <div class="card" style="margin-bottom: 0; padding: 25px;">
-                <h3>Técnico em Administração</h3>
-                <p style="color: var(--text-sub); font-size: 0.9rem;">CETI Chagas Rodrigues | Em curso.</p>
             </div>
         </div>
     </section>
@@ -168,8 +168,8 @@
             <div><span class="footer-label">Disponibilidade</span>Manhã (4h ou 6h)</div>
         </div>
         <div class="cta-group" style="justify-content: center; margin-bottom: 50px;">
-            <a href="https://github.com/dosguinho" target="_blank" class="btn btn-secondary">GitHub</a>
-            <a href="https://www.linkedin.com/in/delfino-odilio-b08aa82b6" target="_blank" class="btn btn-secondary">LinkedIn</a>
+            <a href="https://github.com/dosguinho" target="_blank" class="btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/delfino-odilio-b08aa82b6" target="_blank" class="btn">LinkedIn</a>
         </div>
         <p style="font-size: 0.75rem; color: var(--text-sub); letter-spacing: 0.5px;">© 2025 Delfino Odílio. Todos os direitos reservados.</p>
     </footer>
