@@ -1,0 +1,6 @@
+/para adicionar e subit toda a atualizaçã da html para a pagina
+
+
+git add .
+git commit -m "Delfino Odilio"
+git push origin main --force
